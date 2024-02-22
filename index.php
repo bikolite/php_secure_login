@@ -1,3 +1,4 @@
+<?php require_once "config/authCheck.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +30,7 @@
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form action="action/login.php" method="post">
                 <h1>Sign In</h1>
                 <div class="social-icons">
                     <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
@@ -38,10 +39,10 @@
                     <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <span>or use your email & password</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
                 <a href="#">Forget Your Password?</a>
-                <button>Sign In</button>
+                <button value="Login" name="login">Sign In</button>
             </form>
         </div>
         <div class="toggle-container">
